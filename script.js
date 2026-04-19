@@ -21,7 +21,7 @@
     "gmailProfile", "profilePic", "bottomControls",
     // Settings Panel elements
     "settingsToggle", "settingsOverlay", "settingsPanel", "settingsClose", "settingsBody",
-    "settingShowClock", "settingClock24h", "settingShowSeconds", "settingDarkTheme",
+    "settingDarkTheme",
     "settingBgMode", "settingBgSolidColor", "settingBgGradientFrom", "settingBgGradientTo", "bgSolidRow", "bgGradientRow",
     "settingTitleColor",
     "settingSearchBgColor", "settingSearchTextColor", "settingSearchRadius", "settingSearchWidth",
@@ -815,10 +815,7 @@ var SETTINGS_KEYS = {
   omniTextColor: "vasudev_omni_text_color",
   omniHighlightColor: "vasudev_omni_highlight_color",
   omniRadius: "vasudev_omni_radius",
-  showClock: "vasudev_show_clock",
   showDock: "vasudev_show_dock",
-  clock24h: "vasudev_clock_24h",
-  showSeconds: "vasudev_show_seconds",
   accentColor: "vasudev_accent_color",
   themePreset: "vasudev_theme_preset",
   fontFamily: "vasudev_font_family",
@@ -856,10 +853,7 @@ var settings = {
   omniTextColor: load(SETTINGS_KEYS.omniTextColor, "#f5f5f7"),
   omniHighlightColor: load(SETTINGS_KEYS.omniHighlightColor, "#34c759"),
   omniRadius: load(SETTINGS_KEYS.omniRadius, 20),
-  showClock: load(SETTINGS_KEYS.showClock, false),
   showDock: load(SETTINGS_KEYS.showDock, true),
-  clock24h: load(SETTINGS_KEYS.clock24h, false),
-  showSeconds: load(SETTINGS_KEYS.showSeconds, false),
   accentColor: load(SETTINGS_KEYS.accentColor, "#34C759"),
   themePreset: load(SETTINGS_KEYS.themePreset, "default"),
   fontFamily: load(SETTINGS_KEYS.fontFamily, "Inter"),
@@ -1153,35 +1147,8 @@ if (settingOmniRadius) {
   });
 }
 
-// 2. Clock Options
-var settingShowClock = $("#settingShowClock");
-var settingClock24h = $("#settingClock24h");
-var settingShowSeconds = $("#settingShowSeconds");
 var settingDarkTheme = $("#settingDarkTheme");
-var timeSection = $(".time-section");
-
-settingShowClock.checked = settings.showClock;
-settingClock24h.checked = settings.clock24h;
-settingShowSeconds.checked = settings.showSeconds;
 settingDarkTheme.checked = document.documentElement.getAttribute("data-theme") === "dark";
-
-settingShowClock.addEventListener("change", function() {
-  settings.showClock = this.checked;
-  save(SETTINGS_KEYS.showClock, settings.showClock);
-  timeSection.style.display = settings.showClock ? "block" : "none";
-});
-
-timeSection.style.display = settings.showClock ? "block" : "none";
-
-settingClock24h.addEventListener("change", function() {
-  settings.clock24h = this.checked;
-  save(SETTINGS_KEYS.clock24h, settings.clock24h);
-});
-
-settingShowSeconds.addEventListener("change", function() {
-  settings.showSeconds = this.checked;
-  save(SETTINGS_KEYS.showSeconds, settings.showSeconds);
-});
 
 settingDarkTheme.addEventListener("change", function() {
   applyTheme(this.checked ? "dark" : "light");
