@@ -158,9 +158,9 @@
         <div class="settings-section">
           <div class="settings-section-title">Brand Name</div>
           <label class="settings-label">Display Name</label>
-          <input type="text" class="settings-input" id="settingBrandName" placeholder="Vasudev AI" value="Vasudev AI">
+          <input type="text" class="settings-input" id="settingBrandName" placeholder="DJ ALOK" value="DJ ALOK">
           <label class="settings-label" style="margin-top:10px">Title Color</label>
-          <input type="color" class="color-custom" id="settingTitleColor" value="#34C759" title="Title color">
+          <input type="color" class="color-custom" id="settingTitleColor" value="#F5F5F7" title="Title color">
           <div class="settings-range-row" style="margin-top:10px">
             <div class="settings-range-head">
               <label class="settings-label" for="settingTitleShadow">Title Shadow</label>
@@ -174,15 +174,15 @@
         <div class="settings-section">
           <div class="settings-section-title">Accent Color</div>
           <div class="settings-color-row">
-            <div class="color-swatch active" data-color="#34C759" style="background:#34C759" title="Green"></div>
-            <div class="color-swatch" data-color="#007AFF" style="background:#007AFF" title="Blue"></div>
+            <div class="color-swatch" data-color="#34C759" style="background:#34C759" title="Green"></div>
+            <div class="color-swatch active" data-color="#007AFF" style="background:#007AFF" title="Blue"></div>
             <div class="color-swatch" data-color="#FF9500" style="background:#FF9500" title="Orange"></div>
             <div class="color-swatch" data-color="#FF3B30" style="background:#FF3B30" title="Red"></div>
             <div class="color-swatch" data-color="#AF52DE" style="background:#AF52DE" title="Purple"></div>
             <div class="color-swatch" data-color="#FF2D55" style="background:#FF2D55" title="Pink"></div>
             <div class="color-swatch" data-color="#5AC8FA" style="background:#5AC8FA" title="Cyan"></div>
             <div class="color-swatch" data-color="#FFCC00" style="background:#FFCC00" title="Yellow"></div>
-            <input type="color" class="color-custom" id="settingCustomColor" value="#34C759" title="Custom color">
+            <input type="color" class="color-custom" id="settingCustomColor" value="#007AFF" title="Custom color">
           </div>
         </div>
 
@@ -194,7 +194,7 @@
             <select class="settings-input settings-input-sm bg-mode-select" id="settingBgMode">
               <option value="default">Default</option>
               <option value="solid">Solid</option>
-              <option value="gradient">Gradient</option>
+              <option value="gradient" selected>Gradient</option>
             </select>
           </div>
           <div class="settings-row" id="bgSolidRow">
@@ -204,8 +204,8 @@
           <div id="bgGradientRow">
             <label class="settings-label">Gradient Colors</label>
             <div class="settings-color-row" style="margin-top:6px">
-              <input type="color" class="color-custom" id="settingBgGradientFrom" value="#0f172a" title="Gradient from">
-              <input type="color" class="color-custom" id="settingBgGradientTo" value="#1f2937" title="Gradient to">
+              <input type="color" class="color-custom" id="settingBgGradientFrom" value="#20407A" title="Gradient from">
+              <input type="color" class="color-custom" id="settingBgGradientTo" value="#5B8EDB" title="Gradient to">
             </div>
           </div>
         </div>
@@ -215,7 +215,7 @@
           <div class="settings-section-title">Theme Presets</div>
           <div class="settings-row" style="margin-bottom:10px">
             <label class="settings-label">Dark Theme</label>
-            <label class="settings-toggle"><input type="checkbox" id="settingDarkTheme"><span class="toggle-slider"></span></label>
+            <label class="settings-toggle"><input type="checkbox" id="settingDarkTheme" checked><span class="toggle-slider"></span></label>
           </div>
           <div class="settings-preset-row" id="themePresetRow">
             <button class="preset-btn active" data-preset="default">Default</button>
@@ -277,9 +277,9 @@
             <div class="settings-range-row">
               <div class="settings-range-head">
                 <label class="settings-label" for="settingSearchShadow">Shadow</label>
-                <span class="settings-value" id="searchShadowValue">55%</span>
+                <span class="settings-value" id="searchShadowValue">0%</span>
               </div>
-              <input type="range" class="settings-range" id="settingSearchShadow" min="0" max="100" step="1" value="55">
+              <input type="range" class="settings-range" id="settingSearchShadow" min="0" max="100" step="1" value="0">
             </div>
 
             <div class="search-preview-card">
@@ -311,7 +311,7 @@
             <div class="search-settings-pair">
               <div class="settings-field">
                 <label class="settings-label" for="settingOmniHighlightColor">Highlight</label>
-                <input type="color" class="color-custom" id="settingOmniHighlightColor" value="#34c759" title="Suggestions highlight color">
+                <input type="color" class="color-custom" id="settingOmniHighlightColor" value="#007AFF" title="Suggestions highlight color">
               </div>
               <div class="settings-range-row">
                 <div class="settings-range-head">
@@ -361,7 +361,7 @@
           <div class="settings-section-title">Bookmark Shortcuts</div>
           <div class="settings-row">
             <label class="settings-label">Show Dock</label>
-            <label class="settings-toggle"><input type="checkbox" id="settingShowDock" checked><span class="toggle-slider"></span></label>
+            <label class="settings-toggle"><input type="checkbox" id="settingShowDock"><span class="toggle-slider"></span></label>
           </div>
           <p class="settings-hint">Your dock sites act as bookmarks. Add more via the + button in the dock.</p>
         </div>

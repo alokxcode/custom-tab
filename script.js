@@ -249,8 +249,7 @@
   // 1. THEME
   // ========================================
   var savedTheme = load(KEYS.theme, null);
-  var systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  var currentTheme = savedTheme || (systemDark ? "dark" : "light");
+  var currentTheme = savedTheme || "dark";
 
   document.documentElement.setAttribute("data-theme", currentTheme);
 
@@ -264,12 +263,6 @@
     applyTheme(next);
     save(KEYS.theme, next);
   }
-
-  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (e) {
-    if (!load(KEYS.theme, null)) {
-      applyTheme(e.matches ? "dark" : "light");
-    }
-  });
 
   // ========================================
   // 2. CLOCK & GREETING
@@ -841,26 +834,26 @@ var wallpaperLayer = $("#wallpaperLayer");
 
 // Settings state
 var settings = {
-  brandName: load(SETTINGS_KEYS.brandName, "Vasudev AI"),
-  titleColor: load(SETTINGS_KEYS.titleColor, ""),
+  brandName: load(SETTINGS_KEYS.brandName, "DJ ALOK"),
+  titleColor: load(SETTINGS_KEYS.titleColor, "#F5F5F7"),
   titleShadow: load(SETTINGS_KEYS.titleShadow, 35),
   searchBgColor: load(SETTINGS_KEYS.searchBgColor, "#2b2b2f"),
   searchTextColor: load(SETTINGS_KEYS.searchTextColor, "#ffffff"),
   searchRadius: load(SETTINGS_KEYS.searchRadius, 20),
   searchWidth: load(SETTINGS_KEYS.searchWidth, 560),
-  searchShadow: load(SETTINGS_KEYS.searchShadow, 55),
+  searchShadow: load(SETTINGS_KEYS.searchShadow, 0),
   omniBgColor: load(SETTINGS_KEYS.omniBgColor, "#1f2028"),
   omniTextColor: load(SETTINGS_KEYS.omniTextColor, "#f5f5f7"),
-  omniHighlightColor: load(SETTINGS_KEYS.omniHighlightColor, "#34c759"),
+  omniHighlightColor: load(SETTINGS_KEYS.omniHighlightColor, "#007AFF"),
   omniRadius: load(SETTINGS_KEYS.omniRadius, 20),
-  showDock: load(SETTINGS_KEYS.showDock, true),
-  accentColor: load(SETTINGS_KEYS.accentColor, "#34C759"),
+  showDock: load(SETTINGS_KEYS.showDock, false),
+  accentColor: load(SETTINGS_KEYS.accentColor, "#007AFF"),
   themePreset: load(SETTINGS_KEYS.themePreset, "default"),
   fontFamily: load(SETTINGS_KEYS.fontFamily, "Inter"),
-  bgMode: load(SETTINGS_KEYS.bgMode, "default"),
+  bgMode: load(SETTINGS_KEYS.bgMode, "gradient"),
   bgSolidColor: load(SETTINGS_KEYS.bgSolidColor, "#131316"),
-  bgGradientFrom: load(SETTINGS_KEYS.bgGradientFrom, "#0f172a"),
-  bgGradientTo: load(SETTINGS_KEYS.bgGradientTo, "#1f2937"),
+  bgGradientFrom: load(SETTINGS_KEYS.bgGradientFrom, "#20407A"),
+  bgGradientTo: load(SETTINGS_KEYS.bgGradientTo, "#5B8EDB"),
   wallpaper: load(SETTINGS_KEYS.wallpaper, ""),
   wallpaperDim: load(SETTINGS_KEYS.wallpaperDim, true),
   tabIcon: load(SETTINGS_KEYS.tabIcon, ""),
@@ -1186,6 +1179,7 @@ function setAccentColor(color) {
 }
 
 colorSwatches.forEach(function(swatch) {
+  swatch.classList.remove("active");
   if (swatch.dataset.color === settings.accentColor) swatch.classList.add("active");
   swatch.addEventListener("click", function() {
     colorSwatches.forEach(function(s) {
