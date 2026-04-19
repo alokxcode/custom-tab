@@ -1,62 +1,14 @@
-# Minimal Tab By Vasudev AI
-
-A premium, Apple-style new tab dashboard for Chrome - built with pure HTML, CSS & JavaScript.
+A minimal, personalized new tab page browser extension
 
 ---
 
-## About This Project
-
-**Minimal Tab** replaces your default Chrome new tab with a beautiful dashboard. It comes with a Settings Panel offering customization options.
-
-- **Version:** 1.1
-- **License:** MIT
-- **Demo:** [search.vasudev.online](http://search.vasudev.online/)
-- **Repository:** [github.com/sg-surya/custom-tabye](https://github.com/sg-surya/custom-tabye)
-
----
-
-## Features
-
-### Core Features
-
-- Live Clock with 12h/24h toggle
-- Personalized Greeting (Good morning/afternoon/evening + Your Name)
-- Google Search with Omnibox autocomplete
-- Dark/Light Theme toggle
-- Customizable Dock (add/remove websites)
-- Apple-style 3D animations & floating gradient background
-
-### Settings Panel
-
-1. Settings Panel UI (modal with inner+outer shadow)
-2. Greeting with User Name
-3. Custom Accent Color Picker (8 colors + custom)
-4. Clock Options (show/hide, 12h/24h, seconds)
-5. Theme Presets (Midnight, Ocean, Sunset, Forest, Mono)
-6. Font Selector (Inter, Poppins, Space Grotesk, Outfit, JetBrains Mono)
-7. Custom Background / Wallpaper
-8. Bookmark shortcuts (dock-based)
-9. Import/Export Settings (JSON)
-10. Keyboard Shortcuts Panel
-
----
-
-## Tech Stack
-
-| Technology           | Purpose                            |
-| -------------------- | ---------------------------------- |
-| HTML5                | Structure                          |
-| CSS3                 | Styling, glassmorphism, animations |
-| JavaScript (Vanilla) | All functionality                  |
-| Chrome Manifest V3   | Extension config                   |
-| Google Fonts         | Typography                         |
-| localStorage         | Data persistence                   |
+**Minimal Tab** replaces your default Chromeium new tab with a personalised minimal tab page. It comes with a Settings Panel offering customization options.
 
 ---
 
 ## Installation
 
-### Chrome (Load Unpacked)
+### Chromeium Browser (Load Unpacked)
 
 1. Download ZIP from GitHub
 2. Go to `chrome://extensions`
@@ -76,16 +28,6 @@ A premium, Apple-style new tab dashboard for Chrome - built with pure HTML, CSS 
 
 ---
 
-## Future Roadmap
-
-- [x] Custom wallpaper
-- [x] Accent color picker
-- [ ] Browser sync across devices
-- [ ] Multi-language support
-- [ ] Chrome Web Store publish
-
----
-
 ## Links
 
 - **Demo:** [search.vasudev.online](http://search.vasudev.online/)
@@ -93,5 +35,3 @@ A premium, Apple-style new tab dashboard for Chrome - built with pure HTML, CSS 
 - **Website:** [vasudev.online](https://vasudev.online)
 
 ---
-
-_Built with care by Vasudev AI_
