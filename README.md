@@ -2,7 +2,7 @@ A minimal, personalized new tab page browser extension
 
 ---
 
-**Minimal Tab** replaces your default Chromeium new tab with a personalised minimal tab page. It comes with a Settings Panel offering customization options.
+**Minimal Tab** replaces your default Chromium browser new tab with a personalised minimal tab page. It comes with a Settings Panel offering customization options.
 
 ## Screenshots
 
@@ -14,7 +14,7 @@ A minimal, personalized new tab page browser extension
 
 ## Installation
 
-### Chromeium Browser (Load Unpacked)
+### Any Chromium Browser (Load Unpacked)
 
 1. Download ZIP from GitHub
 2. Go to `chrome://extensions`
